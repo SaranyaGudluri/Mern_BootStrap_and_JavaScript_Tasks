@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript task-4</title>
+    <style>
+        .container {
+            text-align: left;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="showdate" onclick="showdate()">Show Date</button>
+        <p id="date-result"></p>
+        <button id="showtime" onclick="showTime()">Show Time</button>
+        <p id="time-result"></p>
+    </div>
+    <script>
+        function showdate() {
+            let currentDate = new Date();
+            const months = [
+                "January", "February",
+                "March", "April", "May",
+                "June", "July", "August",
+                "September", "October",
+                "November", "December"
+            ];
+            document.getElementById("date-result").innerHTML = currentDate.getDate() + "/" + months[currentDate.getMonth()] + "/" + currentDate.getFullYear();
+        }
+
+        function showTime() {
+            let currentTime = new Date();
+            document.getElementById("time-result").innerHTML = currentTime;
+        }
+    </script>
+</body>
+</html>
